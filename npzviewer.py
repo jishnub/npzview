@@ -32,8 +32,7 @@ class MyWindow(Gtk.Window):
             page = Gtk.Box()
             page.set_border_width(10)
             arr = np.atleast_2d(self.arrays[k])
-
-            self.liststore = Gtk.ListStore(*[str]*arr.shape[0])
+            self.liststore = Gtk.ListStore(*[str]*arr.shape[1])
 
             for i in arr:
                 self.liststore.append(["{:.1f}".format(j) for j in i.tolist()])
