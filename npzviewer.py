@@ -9,12 +9,16 @@ from gi.repository import Gtk
 class MyWindow(Gtk.Window):
 
     def __init__(self):
-        Gtk.Window.__init__(self, title="Array Viewer")
+        Gtk.Window.__init__(self, title="NPZ Viewer")
         self.set_border_width(3)
 
         self.notebook = Gtk.Notebook()
         self.add(self.notebook)
 
+        ''' The code is supposed to be executed as "python npzviewer.py <npz file>""
+        The npzviewer.desktop file lists the executable as "exec=<path to npzviewer.py> %f",
+        indicating that the filename is the first argument.
+        '''
         if len(sys.argv)>1:
             try:
                 with np.load(sys.argv[1]) as f:

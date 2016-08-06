@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=FITSview
+Comment=Plot a 2D FITS file using matplotlib
+Exec=fitsviewer.py %F
+Path=npzviewer
+Icon=/usr/share/icons/Humanity/apps/32/access.svg
+Terminal=false
+Type=Application
+Categories=Utility;Application;Development;
